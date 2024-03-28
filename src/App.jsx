@@ -2,16 +2,7 @@ import { useState } from 'react';
 
 import './App.css';
 
-import {
-  Bag,
-  ClosedBook,
-  GradCap,
-  Logo,
-  OpenBook,
-  Pencil,
-  Ruler,
-  Week1,
-} from './assets';
+import { Logo, Week1 } from './assets';
 
 import Page1 from './pages/Page1';
 
@@ -21,8 +12,7 @@ import Footer from './components/Footer/Footer';
 
 export default function App() {
   const [pageCount, setPageCount] = useState(0);
-
-  const pages = [Page1, Page2, null, null];
+  const pages = [Page1, Page2];
 
   const CurrentPage = pages[pageCount];
 
@@ -38,65 +28,7 @@ export default function App() {
         </div>
       </header>
 
-      <div className="grid grid-cols-[0_1fr_0] md:grid-cols-[minmax(0,_auto)_1fr_minmax(0,_auto)]">
-        <div className="grid content-between mb-16">
-          <img
-            src={Pencil}
-            alt="pencil"
-            role="presentation"
-            width="70"
-            decoding="async"
-          />
-
-          <img
-            src={Bag}
-            alt="bag"
-            role="presentation"
-            width="70"
-            decoding="async"
-          />
-
-          <img
-            src={OpenBook}
-            alt="open book"
-            role="presentation"
-            width="70"
-            decoding="async"
-          />
-        </div>
-
-        <div className="grid grid-cols-[1fr_auto]">
-          <main className="bg-[#f7f9fe] text-2xl *:mb-4 px-4 pb-6 pt-4 rounded-3xl">
-            <CurrentPage />
-          </main>
-        </div>
-
-        <div className="grid content-between mb-16">
-          <img
-            src={Ruler}
-            alt="ruler"
-            role="presentation"
-            width="70"
-            decoding="async"
-          />
-
-          <img
-            src={ClosedBook}
-            alt="closed book"
-            role="presentation"
-            width="70"
-            decoding="async"
-          />
-
-          <img
-            src={GradCap}
-            alt="graduation cap"
-            role="presentation"
-            width="70"
-            decoding="async"
-          />
-        </div>
-      </div>
+      <CurrentPage />
 
       <Footer
         pages={pages.length}

@@ -20,6 +20,8 @@ import SunnyBeach from './beach.svg';
 import DarkNight from './dark-night.svg';
 import House from './house.svg';
 import Clock from './clock.svg';
+import Cross from './cross.svg';
+import QuestionMark from './question-mark.svg';
 
 export {
   Bag,
@@ -44,4 +46,6 @@ export {
   DarkNight,
   House,
   Clock,
+  Cross,
+  QuestionMark,
 };

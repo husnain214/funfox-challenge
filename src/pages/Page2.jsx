@@ -1,9 +1,14 @@
+import { useState } from 'react';
 import { Clock, DarkNight, House, SunnyBeach } from '../assets';
+import Modal from '../components/Footer/Modal';
+import MainWrapper from '../components/MainWrapper';
 
 export default function Page2() {
+  const [modalOpen, setModalOpen] = useState(false);
+
   return (
-    <>
-      <div className="absolute inset-0 bg-black"></div>
+    <MainWrapper setModalOpen={setModalOpen}>
+      <Modal modalOpen={modalOpen} setModalOpen={setModalOpen} />
       <p className="text-3xl">
         Can you figure out the definition of setting from the following
         examples?
@@ -11,7 +16,7 @@ export default function Page2() {
 
       <p>(take a minute to think about this)</p>
 
-      <div className="flex justify-evenly items-center">
+      <div className="flex justify-evenly flex-wrap gap-5 md:gap-0 items-center">
         <div className="border-[3px] border-dashed border-[#CCCCCC] py-3 px-6 rounded-xl">
           <img src={SunnyBeach} alt="" />
         </div>
@@ -22,8 +27,8 @@ export default function Page2() {
 
       <p>So, what do you think the definition of setting is?</p>
 
-      <div className="flex gap-3">
-        <div className="flex flex-1 gap-2 justify-stretch items-center">
+      <div className="flex gap-3 flex-col md:flex-row items-center">
+        <div className="flex flex-1 flex-col md:flex-row gap-2 justify-stretch items-center">
           <label htmlFor="">Any guesses?</label>
           <div className="flex-1 border-[3px] border-dashed border-[#CCCCCC] py-1 px-6 rounded-xl">
             <input
@@ -55,6 +60,6 @@ export default function Page2() {
         or winter. A story may take place in a school, a mall, a desert, an
         airplane or in a variety of other places.
       </p>
-    </>
+    </MainWrapper>
   );
 }

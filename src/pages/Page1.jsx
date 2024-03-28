@@ -1,8 +1,9 @@
 import { Cloud1, Cloud2, Cloud3, Girl, Note } from '../assets';
+import MainWrapper from '../components/MainWrapper';
 
 export default function Page1() {
   return (
-    <>
+    <MainWrapper>
       <h1 className="mx-auto bg-[#fe6784] text-3xl border-[3px] border-dashed border-[#ffaebe] text-[#f7f9fe] rounded-full w-fit text-center py-1.5 px-6">
         Elements of Story Writing
       </h1>
@@ -49,6 +50,6 @@ export default function Page1() {
           fiction story.
         </p>
       </div>
-    </>
+    </MainWrapper>
   );
 }
