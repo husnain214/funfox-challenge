@@ -57,7 +57,7 @@ export default function MainWrapper({ setModalOpen = null, children }) {
             onClick={() => setModalOpen(true)}
             className="absolute top-10 right-10 md:static"
           >
-            <img src={QuestionMark} alt="" />
+            <img src={QuestionMark} alt="question mark" />
           </button>
         ) : (
           <img

@@ -1,4 +1,4 @@
-import { Clock, Cross, House } from '../../assets';
+import { Clock, Cross, House } from '../assets';
 
 export default function Modal({ modalOpen, setModalOpen }) {
   return (
@@ -6,12 +6,12 @@ export default function Modal({ modalOpen, setModalOpen }) {
       aria-hidden={!modalOpen}
       className="aria-hidden:hidden absolute inset-0 bg-[#6C5D4A] bg-opacity-70 p-5 md:p-16 text-white grid backdrop-blur-sm z-10"
     >
-      <div className="bg-[#111111] border-[3px] border-white bg-opacity-20 rounded-lg relative grid items-start py-20 px-10">
+      <div className="bg-[#111111] border-[3px] border-white bg-opacity-20 rounded-lg relative grid items-start content-start gap-20 md:content-normal md:gap-0 py-20 px-10">
         <button
           className="absolute right-3 top-3"
           onClick={() => setModalOpen(false)}
         >
-          <img src={Cross} alt="" />
+          <img src={Cross} alt="cross sign" />
         </button>
 
         <h1 className="text-3xl text-center">Guide Sheet</h1>
@@ -29,10 +29,10 @@ export default function Modal({ modalOpen, setModalOpen }) {
           <div className="flex gap-3 items-center">
             <span>Hint:</span>
             <button>
-              <img className="align-middle" src={Clock} alt="" />
+              <img className="align-middle" src={Clock} alt="clock" />
             </button>
             <button>
-              <img className="align-middle" src={House} alt="" />
+              <img className="align-middle" src={House} alt="house" />
             </button>
           </div>
         </div>
